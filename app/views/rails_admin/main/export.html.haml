@@ -83,9 +83,9 @@
       %button.btn.btn-primary{type: "submit", name: 'csv'}
         %i.icon-white.icon-ok
         = t("admin.export.confirmation", name: 'csv')
-      %button.btn.btn-info{type: "submit", name: 'json'}
+      %button#jsonExport.btn.btn-info{type: "submit", name: 'json'}
         = t("admin.export.confirmation", name: 'json')
-      %button.btn.btn-info{type: "submit", name: 'xml'}
+      %button#xmlExport.btn.btn-info{type: "submit", name: 'xml'}
         = t("admin.export.confirmation", name: 'xml')
       %button.btn{type: "submit", name: "_continue"}
         %i.icon-remove
