@@ -51,7 +51,7 @@
                     = check_box_tag "schema[include][#{field.name}][#{list}][]", associated_model_field.name, true, { id: "schema_include_#{field.name}_#{list}_#{associated_model_field.name}" }
                     = capitalize_first_letter(associated_model_field.label)
 
-  %fieldset
+  %fieldset#exportOptions
     %legend
       %i.icon-chevron-down
       = t('admin.export.options_for', name: 'csv')
