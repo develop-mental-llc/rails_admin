@@ -11,6 +11,11 @@ module RailsAdmin
       @model_config = @abstract_model.config
       @methods = [(schema[:only] || []) + (schema[:methods] || [])].flatten.compact
       @fields = @methods.collect { |m| export_fields_for(m).first }
+
+      @fields.sort! do |a, b|
+        a.css_class.to_i <=> b.css_class.to_i
+      end
+
       @empty = ::I18n.t('admin.export.empty_value_for_associated_objects')
       schema_include = schema.delete(:include) || {}
 
